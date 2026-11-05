@@ -1,2 +1,2 @@
 # GameLeaderboardProject
-COP3530 Group Project
+COP3530 Group Project for a game leaderboard
