@@ -51,7 +51,7 @@ public class Node
 		parent = node;
 	}
 	
-	public void calHeight() {
+	public void calcHeight() {
 		int leftHeight = 0;
 		int rightHeight = 0;
 		
