@@ -1,7 +1,12 @@
+/**
+ * This loads the UI.
+ * 
+ * @author Kaureon DuBois
+ */
 public class LeaderboardMain
 {
 	public static void main(String[] args)
 	{
-		//Loads UI and does nothing else besides console testing if needed
+		LeaderboardUI ui = new LeaderboardUI();
 	}
 }
