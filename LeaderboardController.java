@@ -18,7 +18,7 @@ public class LeaderboardController
 	
 	
 	//loads in data for tree to add
-	private String fileName = "player_data_file";
+	private String fileName = "player_data_file.txt";
 	private List<Player> playerList;
 	
 	public LeaderboardController()
@@ -52,7 +52,7 @@ public class LeaderboardController
 		}
 		
 		//stores the new player or updates their existing score
-		if(!store.store(ID, oldScore)) {
+		if(!store.store(ID, score)) {
 			return false;
 		}
 		
@@ -63,8 +63,11 @@ public class LeaderboardController
 		}
 		
 		//adds the updated player record to both trees
-		idTree.insert(oldScore, ID);
-		scoreTree.insert(oldScore, ID);
+		idTree.insert(score, ID);
+		scoreTree.insert(score, ID);
+		
+		// Saves the updated player records to the data file
+		FileHandler.savePlayers(fileName, store.toList());
 		
 		return true;
 	}
