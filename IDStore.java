@@ -77,18 +77,6 @@ public int indexOf(int id) {
 	//returns -1 if the ID being looked for doesn't exist
 	return -1;
 }
-//adds existing Player object to the array
-public void append(Player player) {
-	// expands array if it is full
-	if (count == players.length) {
-		grow();
-	}
-	
-	//stores the Player object at next available position
-	players[count] = player;
-	//increases number of stored players
-	count++;
-}
 
 //converts stored Player objects into a list
 public List<Player> toList() {
